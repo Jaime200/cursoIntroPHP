@@ -1,0 +1,25 @@
+{
+    "name": "payone-desarrollo/cursophp",
+    "description": "curso de Platzi intro php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\" : "App/",
+            "Libs\\" : "Libs/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jaime Muñoz",
+            "email": "jaime.munoz200@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^7.18",
+        "zendframework/zend-diactoros": "^2.2",
+        "aura/router": "^3.1",
+        "twig/twig": "^3.0",
+        "respect/validation": "^2.0",
+        "vlucas/phpdotenv": "^5.0"
+    }
+}

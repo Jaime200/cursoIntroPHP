@@ -1,0 +1,44 @@
+{% extends "layout.twig" %}
+
+{% block content %} 
+    <hr>
+    <h1 class="border-bottom-gray p-2 mt-2 text-center" >Add Job</h1>
+    <hr>
+    {% if responseMessage %}
+    <div class="alert alert-primary" role="aler">
+            {{ responseMessage }}
+    </div>
+    {% endif %}
+    <form action="/jobs/add" method="post" enctype="multipart/form-data">
+    <div class="form-row">
+    
+        <div class="form-group col-md-6">
+            <label for="">Title:</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="title" 
+                    id="title">
+        </div>
+    
+    
+        <div class="form-group col-md-6">
+            <label for="">Description</label>
+            <input type="text" 
+                    class="form-control" 
+                    name="description" 
+                    id="description">
+        </div>
+    </div>
+
+    <div class="form-row mb-2">
+        <div class="form-group col-md-12">
+        <label for="exampleFormControlFile1">Seleccione un archivo</label>
+        <input type="file" 
+                class="form-control-file" 
+                id="logo"
+                name="logo">
+        </div>
+    </div>
+        <button type="submit" class="btn btn-primary btn-block">Add Job</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layoutAuth.twig" %}
+
+{% block content %} 
+    <hr>
+    <h1 class="border-bottom-gray p-2 mt-2 text-center" >Loging</h1>
+    <hr>
+    {% if responseMessage %}
+    <div class="alert alert-primary" role="aler">
+            {{ responseMessage }}
+    </div>
+    {% endif %}
+    <form action="/auth" method="post">
+    <div class="form-row">
+    
+        <div class="form-group col-md-6">
+            <label for="">Email:</label>
+            <input type="email" 
+                    class="form-control" 
+                    placeholder ="email@email.com"
+                    name="email" 
+                    id="email">
+        </div>
+    
+    
+        <div class="form-group col-md-6">
+            <label for="">Password:</label>
+            <input type="password" 
+                    class="form-control" 
+                    placeholder="**********"
+                    name="password" 
+                    id="password">
+        </div>
+    </div>
+        <button type="submit" class="btn btn-primary btn-block">Loging</button>
+    </form>
+{% endblock %}
